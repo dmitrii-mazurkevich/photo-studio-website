@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="pf.metaTitle">Portfolio — Aperture</title>
+<meta name="description" data-i18n-attr="content:pf.metaDesc" content="Photography portfolio: portraits, weddings, interiors and product work, with a full-screen viewer and keyboard navigation.">
+<meta name="theme-color" content="#F4F4F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131314" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portfolio — Aperture">
+<meta property="og:description" content="Photography portfolio: portraits, weddings, interiors and product work, with a full-screen viewer and keyboard navigation.">
+<link rel="canonical" href="https://dmitrii-mazurkevich.github.io/photo-studio-website/portfolio.html">
+<link rel="alternate" hreflang="en" href="https://dmitrii-mazurkevich.github.io/photo-studio-website/portfolio.html?lang=en">
+<link rel="alternate" hreflang="ru" href="https://dmitrii-mazurkevich.github.io/photo-studio-website/portfolio.html?lang=ru">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23131314'/%3E%3Ccircle cx='50' cy='50' r='27' fill='none' stroke='%23F4F4F3' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='9' fill='%237A2B36'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Commissioner:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+(function () {
+  var d = document.documentElement, langs = ['en', 'ru'], lang = null;
+  var p = location.search.match(/[?&]lang=([a-z]{2})/i);
+  if (p && langs.indexOf(p[1].toLowerCase()) > -1) lang = p[1].toLowerCase();
+  if (!lang) { try { var s = localStorage.getItem('ap-lang'); if (langs.indexOf(s) > -1) lang = s; } catch (e) {} }
+  if (!lang) { lang = /^ru/i.test(navigator.language || '') ? 'ru' : 'en'; }
+  d.setAttribute('data-lang', lang);
+  if (lang !== 'en') { d.className += ' i18n-pending'; setTimeout(function () { d.classList.remove('i18n-pending'); }, 1200); }
+  try { var t = localStorage.getItem('ap-theme'); if (t) d.setAttribute('data-theme', t); } catch (e) {}
+})();
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="index.html">
+        <span class="logo__name">Aperture</span>
+        <span class="logo__sub" data-i18n="logo.sub">Photography studio</span>
+      </a>
+
+      <ul class="nav__list">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="portfolio.html" aria-current="page" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="pricing.html" data-i18n="nav.pricing">Packages</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+        </div>
+        <button class="icon-btn theme-toggle" type="button" data-i18n-attr="aria-label:nav.theme" aria-label="Switch colour theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-i18n-attr="aria-label:nav.menu" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <a class="btn btn--sm nav__cta" href="pricing.html#enquiry" data-i18n="nav.book">Book a shoot</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+  <a href="pricing.html" data-i18n="nav.pricing">Packages</a>
+  <a href="index.html#about" data-i18n="nav.about">About</a>
+  <a class="btn" href="pricing.html#enquiry" data-i18n="nav.book">Book a shoot</a>
+</div>
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="container">
+      <h1 class="page-head__title" data-i18n="pf.title">Portfolio</h1>
+      <p class="page-head__lede" data-i18n="pf.lede">
+        Twenty-four frames from different shoots. Click any of them to open it full screen;
+        arrow keys and swipe both work.
+      </p>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="container">
+      <div class="filters" role="group" aria-label="Filter by category">
+        <button type="button" data-filter="all" aria-pressed="true" data-i18n="pf.all">All</button>
+        <button type="button" data-filter="portraits" aria-pressed="false" data-i18n="pf.portraits">Portraits</button>
+        <button type="button" data-filter="weddings" aria-pressed="false" data-i18n="pf.weddings">Weddings</button>
+        <button type="button" data-filter="interiors" aria-pressed="false" data-i18n="pf.interiors">Interiors</button>
+        <button type="button" data-filter="product" aria-pressed="false" data-i18n="pf.product">Product</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="container--wide">
+      <div class="gallery">
+        <button class="shot" type="button"
+          data-id="portrait-01" data-category="portraits"
+          data-full="assets/img/gallery/portrait-01.svg" data-w="1000" data-h="1400"
+          data-title="Studio portrait" data-meta="85mm · f/1.4 · studio strobe"
+          data-i18n-attr="data-title:cap.portrait-01t|data-meta:cap.portrait-01m">
+          <img src="assets/img/gallery/portrait-01.svg" width="1000" height="1400"
+               fetchpriority="high" decoding="async"
+               alt="Studio portrait" data-i18n-attr="alt:cap.portrait-01t">
+          <span class="shot__cap"><b data-i18n="cap.portrait-01t">Studio portrait</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="portrait-02" data-category="portraits"
+          data-full="assets/img/gallery/portrait-02.svg" data-w="1000" data-h="1400"
+          data-title="Available light" data-meta="50mm · f/2 · window only"
+          data-i18n-attr="data-title:cap.portrait-02t|data-meta:cap.portrait-02m">
+          <img src="assets/img/gallery/portrait-02.svg" width="1000" height="1400"
+               fetchpriority="high" decoding="async"
+               alt="Available light" data-i18n-attr="alt:cap.portrait-02t">
+          <span class="shot__cap"><b data-i18n="cap.portrait-02t">Available light</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="portrait-03" data-category="portraits"
+          data-full="assets/img/gallery/portrait-03.svg" data-w="1000" data-h="1400"
+          data-title="Editorial headshot" data-meta="85mm · f/2.8 · two lights"
+          data-i18n-attr="data-title:cap.portrait-03t|data-meta:cap.portrait-03m">
+          <img src="assets/img/gallery/portrait-03.svg" width="1000" height="1400"
+               loading="lazy" decoding="async"
+               alt="Editorial headshot" data-i18n-attr="alt:cap.portrait-03t">
+          <span class="shot__cap"><b data-i18n="cap.portrait-03t">Editorial headshot</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="portrait-04" data-category="portraits"
+          data-full="assets/img/gallery/portrait-04.svg" data-w="1000" data-h="1400"
+          data-title="Window light" data-meta="35mm · f/1.8 · no flash"
+          data-i18n-attr="data-title:cap.portrait-04t|data-meta:cap.portrait-04m">
+          <img src="assets/img/gallery/portrait-04.svg" width="1000" height="1400"
+               loading="lazy" decoding="async"
+               alt="Window light" data-i18n-attr="alt:cap.portrait-04t">
+          <span class="shot__cap"><b data-i18n="cap.portrait-04t">Window light</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="portrait-05" data-category="portraits"
+          data-full="assets/img/gallery/portrait-05.svg" data-w="1000" data-h="1400"
+          data-title="Character study" data-meta="105mm · f/2.5 · single source"
+          data-i18n-attr="data-title:cap.portrait-05t|data-meta:cap.portrait-05m">
+          <img src="assets/img/gallery/portrait-05.svg" width="1000" height="1400"
+               loading="lazy" decoding="async"
+               alt="Character study" data-i18n-attr="alt:cap.portrait-05t">
+          <span class="shot__cap"><b data-i18n="cap.portrait-05t">Character study</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="portrait-06" data-category="portraits"
+          data-full="assets/img/gallery/portrait-06.svg" data-w="1000" data-h="1400"
+          data-title="Business portrait" data-meta="85mm · f/4 · for a company site"
+          data-i18n-attr="data-title:cap.portrait-06t|data-meta:cap.portrait-06m">
+          <img src="assets/img/gallery/portrait-06.svg" width="1000" height="1400"
+               loading="lazy" decoding="async"
+               alt="Business portrait" data-i18n-attr="alt:cap.portrait-06t">
+          <span class="shot__cap"><b data-i18n="cap.portrait-06t">Business portrait</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="wedding-01" data-category="weddings"
+          data-full="assets/img/gallery/wedding-01.svg" data-w="1400" data-h="1000"
+          data-title="First look" data-meta="35mm · f/1.8 · morning"
+          data-i18n-attr="data-title:cap.wedding-01t|data-meta:cap.wedding-01m">
+          <img src="assets/img/gallery/wedding-01.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="First look" data-i18n-attr="alt:cap.wedding-01t">
+          <span class="shot__cap"><b data-i18n="cap.wedding-01t">First look</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="wedding-02" data-category="weddings"
+          data-full="assets/img/gallery/wedding-02.svg" data-w="1400" data-h="1000"
+          data-title="Ceremony" data-meta="70–200mm · available light"
+          data-i18n-attr="data-title:cap.wedding-02t|data-meta:cap.wedding-02m">
+          <img src="assets/img/gallery/wedding-02.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="Ceremony" data-i18n-attr="alt:cap.wedding-02t">
+          <span class="shot__cap"><b data-i18n="cap.wedding-02t">Ceremony</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="wedding-03" data-category="weddings"
+          data-full="assets/img/gallery/wedding-03.svg" data-w="1400" data-h="1000"
+          data-title="Golden hour" data-meta="85mm · f/1.6 · sunset"
+          data-i18n-attr="data-title:cap.wedding-03t|data-meta:cap.wedding-03m">
+          <img src="assets/img/gallery/wedding-03.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="Golden hour" data-i18n-attr="alt:cap.wedding-03t">
+          <span class="shot__cap"><b data-i18n="cap.wedding-03t">Golden hour</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="wedding-04" data-category="weddings"
+          data-full="assets/img/gallery/wedding-04.svg" data-w="1400" data-h="1000"
+          data-title="The details" data-meta="100mm macro · f/4"
+          data-i18n-attr="data-title:cap.wedding-04t|data-meta:cap.wedding-04m">
+          <img src="assets/img/gallery/wedding-04.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="The details" data-i18n-attr="alt:cap.wedding-04t">
+          <span class="shot__cap"><b data-i18n="cap.wedding-04t">The details</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="wedding-05" data-category="weddings"
+          data-full="assets/img/gallery/wedding-05.svg" data-w="1400" data-h="1000"
+          data-title="Reception" data-meta="24mm · f/2.8 · on-camera light"
+          data-i18n-attr="data-title:cap.wedding-05t|data-meta:cap.wedding-05m">
+          <img src="assets/img/gallery/wedding-05.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="Reception" data-i18n-attr="alt:cap.wedding-05t">
+          <span class="shot__cap"><b data-i18n="cap.wedding-05t">Reception</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="wedding-06" data-category="weddings"
+          data-full="assets/img/gallery/wedding-06.svg" data-w="1400" data-h="1000"
+          data-title="Quiet moment" data-meta="50mm · f/1.4 · available light"
+          data-i18n-attr="data-title:cap.wedding-06t|data-meta:cap.wedding-06m">
+          <img src="assets/img/gallery/wedding-06.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="Quiet moment" data-i18n-attr="alt:cap.wedding-06t">
+          <span class="shot__cap"><b data-i18n="cap.wedding-06t">Quiet moment</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="interior-01" data-category="interiors"
+          data-full="assets/img/gallery/interior-01.svg" data-w="1400" data-h="1000"
+          data-title="Morning room" data-meta="17mm · tripod · exposure blend"
+          data-i18n-attr="data-title:cap.interior-01t|data-meta:cap.interior-01m">
+          <img src="assets/img/gallery/interior-01.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="Morning room" data-i18n-attr="alt:cap.interior-01t">
+          <span class="shot__cap"><b data-i18n="cap.interior-01t">Morning room</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="interior-02" data-category="interiors"
+          data-full="assets/img/gallery/interior-02.svg" data-w="1400" data-h="1000"
+          data-title="Restaurant floor" data-meta="24mm · f/8 · mixed light"
+          data-i18n-attr="data-title:cap.interior-02t|data-meta:cap.interior-02m">
+          <img src="assets/img/gallery/interior-02.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="Restaurant floor" data-i18n-attr="alt:cap.interior-02t">
+          <span class="shot__cap"><b data-i18n="cap.interior-02t">Restaurant floor</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="interior-03" data-category="interiors"
+          data-full="assets/img/gallery/interior-03.svg" data-w="1400" data-h="1000"
+          data-title="Hotel suite" data-meta="20mm · f/9 · tripod"
+          data-i18n-attr="data-title:cap.interior-03t|data-meta:cap.interior-03m">
+          <img src="assets/img/gallery/interior-03.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="Hotel suite" data-i18n-attr="alt:cap.interior-03t">
+          <span class="shot__cap"><b data-i18n="cap.interior-03t">Hotel suite</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="interior-04" data-category="interiors"
+          data-full="assets/img/gallery/interior-04.svg" data-w="1400" data-h="1000"
+          data-title="Studio space" data-meta="17mm · f/8"
+          data-i18n-attr="data-title:cap.interior-04t|data-meta:cap.interior-04m">
+          <img src="assets/img/gallery/interior-04.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="Studio space" data-i18n-attr="alt:cap.interior-04t">
+          <span class="shot__cap"><b data-i18n="cap.interior-04t">Studio space</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="interior-05" data-category="interiors"
+          data-full="assets/img/gallery/interior-05.svg" data-w="1400" data-h="1000"
+          data-title="Retail interior" data-meta="24mm · f/7.1 · evening"
+          data-i18n-attr="data-title:cap.interior-05t|data-meta:cap.interior-05m">
+          <img src="assets/img/gallery/interior-05.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="Retail interior" data-i18n-attr="alt:cap.interior-05t">
+          <span class="shot__cap"><b data-i18n="cap.interior-05t">Retail interior</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="interior-06" data-category="interiors"
+          data-full="assets/img/gallery/interior-06.svg" data-w="1400" data-h="1000"
+          data-title="Reading corner" data-meta="35mm · f/4 · daylight"
+          data-i18n-attr="data-title:cap.interior-06t|data-meta:cap.interior-06m">
+          <img src="assets/img/gallery/interior-06.svg" width="1400" height="1000"
+               loading="lazy" decoding="async"
+               alt="Reading corner" data-i18n-attr="alt:cap.interior-06t">
+          <span class="shot__cap"><b data-i18n="cap.interior-06t">Reading corner</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="product-01" data-category="product"
+          data-full="assets/img/gallery/product-01.svg" data-w="1200" data-h="1200"
+          data-title="Ceramics" data-meta="100mm macro · softbox"
+          data-i18n-attr="data-title:cap.product-01t|data-meta:cap.product-01m">
+          <img src="assets/img/gallery/product-01.svg" width="1200" height="1200"
+               loading="lazy" decoding="async"
+               alt="Ceramics" data-i18n-attr="alt:cap.product-01t">
+          <span class="shot__cap"><b data-i18n="cap.product-01t">Ceramics</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="product-02" data-category="product"
+          data-full="assets/img/gallery/product-02.svg" data-w="1200" data-h="1200"
+          data-title="Glassware" data-meta="100mm · backlit"
+          data-i18n-attr="data-title:cap.product-02t|data-meta:cap.product-02m">
+          <img src="assets/img/gallery/product-02.svg" width="1200" height="1200"
+               loading="lazy" decoding="async"
+               alt="Glassware" data-i18n-attr="alt:cap.product-02t">
+          <span class="shot__cap"><b data-i18n="cap.product-02t">Glassware</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="product-03" data-category="product"
+          data-full="assets/img/gallery/product-03.svg" data-w="1200" data-h="1200"
+          data-title="Packaging" data-meta="90mm · f/11 · focus stack"
+          data-i18n-attr="data-title:cap.product-03t|data-meta:cap.product-03m">
+          <img src="assets/img/gallery/product-03.svg" width="1200" height="1200"
+               loading="lazy" decoding="async"
+               alt="Packaging" data-i18n-attr="alt:cap.product-03t">
+          <span class="shot__cap"><b data-i18n="cap.product-03t">Packaging</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="product-04" data-category="product"
+          data-full="assets/img/gallery/product-04.svg" data-w="1200" data-h="1200"
+          data-title="Leather goods" data-meta="100mm · side light"
+          data-i18n-attr="data-title:cap.product-04t|data-meta:cap.product-04m">
+          <img src="assets/img/gallery/product-04.svg" width="1200" height="1200"
+               loading="lazy" decoding="async"
+               alt="Leather goods" data-i18n-attr="alt:cap.product-04t">
+          <span class="shot__cap"><b data-i18n="cap.product-04t">Leather goods</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="product-05" data-category="product"
+          data-full="assets/img/gallery/product-05.svg" data-w="1200" data-h="1200"
+          data-title="Small objects" data-meta="100mm macro · f/16"
+          data-i18n-attr="data-title:cap.product-05t|data-meta:cap.product-05m">
+          <img src="assets/img/gallery/product-05.svg" width="1200" height="1200"
+               loading="lazy" decoding="async"
+               alt="Small objects" data-i18n-attr="alt:cap.product-05t">
+          <span class="shot__cap"><b data-i18n="cap.product-05t">Small objects</b></span>
+        </button>
+        <button class="shot" type="button"
+          data-id="product-06" data-category="product"
+          data-full="assets/img/gallery/product-06.svg" data-w="1200" data-h="1200"
+          data-title="Editorial still life" data-meta="85mm · f/5.6 · hard light"
+          data-i18n-attr="data-title:cap.product-06t|data-meta:cap.product-06m">
+          <img src="assets/img/gallery/product-06.svg" width="1200" height="1200"
+               loading="lazy" decoding="async"
+               alt="Editorial still life" data-i18n-attr="alt:cap.product-06t">
+          <span class="shot__cap"><b data-i18n="cap.product-06t">Editorial still life</b></span>
+        </button>
+      </div>
+      <p class="gallery-note" data-gallery-empty hidden></p>
+      <p class="gallery-note" data-i18n="pf.note">
+        You can share a link to one photograph — the address changes as you browse.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow cta-band reveal">
+      <h2 data-i18n="home.ctaTitle">Let's talk about your shoot</h2>
+      <p data-i18n="home.ctaLede">
+        Two sentences about what you need is enough. We answer within a day and tell you which
+        package fits — or that you don't need a shoot yet.
+      </p>
+      <div class="center-actions">
+        <a class="btn" href="pricing.html#enquiry" data-i18n="nav.book">Book a shoot</a>
+        <a class="btn btn--outline" href="pricing.html" data-i18n="home.cta2">Packages &amp; prices</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="lightbox__bar">
+    <span data-lb-count>1 of 24</span>
+    <button class="lb-btn" type="button" data-lb-close data-i18n-attr="aria-label:lb.close" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <figure class="lightbox__figure">
+    <img data-lb-img alt="" width="1400" height="1000">
+  </figure>
+  <figcaption class="lightbox__caption">
+    <b data-lb-title></b>
+    <span data-lb-meta></span>
+  </figcaption>
+  <button class="lb-btn lightbox__nav lightbox__nav--prev" type="button" data-lb-prev data-i18n-attr="aria-label:lb.prev" aria-label="Previous photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="lb-btn lightbox__nav lightbox__nav--next" type="button" data-lb-next data-i18n-attr="aria-label:lb.next" aria-label="Next photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html">
+          <span class="logo__name">Aperture</span>
+          <span class="logo__sub" data-i18n="logo.sub">Photography studio</span>
+        </a>
+        <p class="footer__about" data-i18n="foot.about">
+          Portraits, weddings, interiors and product photography. In the studio or on location.
+        </p>
+      </div>
+      <div>
+        <h4 data-i18n="foot.explore">Explore</h4>
+        <ul>
+          <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="nav.pricing">Packages</a></li>
+          <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+          <li><a href="pricing.html#enquiry" data-i18n="nav.book">Book a shoot</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="foot.services">Shoots</h4>
+        <ul>
+          <li><a href="portfolio.html#portraits" data-i18n="pf.portraits">Portraits</a></li>
+          <li><a href="portfolio.html#weddings" data-i18n="pf.weddings">Weddings</a></li>
+          <li><a href="portfolio.html#interiors" data-i18n="pf.interiors">Interiors</a></li>
+          <li><a href="portfolio.html#product" data-i18n="pf.product">Product</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="foot.contact">Contact</h4>
+        <ul>
+          <li><a href="mailto:studio@aperture.example.com">studio@aperture.example.com</a></li>
+          <li><a href="#" rel="noopener">Instagram</a></li>
+          <li><a href="#" rel="noopener">Telegram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Aperture</span>
+      <span data-i18n="foot.demoNote">Concept site built for a web-development portfolio.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
